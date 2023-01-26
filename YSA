@@ -1,0 +1,32 @@
+Reverse a String
+Reverse the provided string and return the reversed string.
+
+For example, "hello" should become "olleh".
+
+
+Passed:reverseString("hello") should return a string.
+Passed:reverseString("hello") should return the string olleh.
+Passed:reverseString("Howdy") should return the string ydwoH.
+Passed:reverseString("Greetings from Earth") should return the string htraE morf sgniteerG.
+
+BEFORE
+
+function reverseString(str) {
+  return str;
+}
+
+reverseString("hello");
+
+
+
+SOLUTION
+
+function reverseString(str) {
+  if (str === '')
+    {return ''};
+  
+  return reverseString(str.substring(1)) + str.charAt(0);
+}
+
+
+reverseString("hello");
